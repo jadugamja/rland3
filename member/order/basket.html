@@ -1,0 +1,117 @@
+<!-- 박준호, 유지수 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href=#>뒤로가기</a>
+            <a href=#>메뉴버튼</a>
+        </div>
+    </header>
+
+    <section>
+        <h1>
+            <span>장바구니(5)</span>
+            <span>장바구니</span>
+        </h1>
+        <form>            
+            <article>
+                <div>
+                    <img alt="알랜드 커피">
+                </div>
+                <div>
+                    <h2>알랜드 커피</h2>
+                    <p>
+                        <span>ICED / Large</span>
+                        <span>4,500원</span>
+                    </p>
+                    <p>
+                        <button>-</button>
+                        3
+                        <button>+</button>
+                        <span>13,500원</span>
+                    </p>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <img alt="버터 쿠키">
+                </div>
+                <div>
+                    <h2>버터 쿠키</h2>
+                    <p>
+                        <span>Large</span>
+                        <span>2,000원</span>
+                    </p>
+                    <p>
+                        <button>-</button> 
+                        2
+                        <button>+</button>
+                        <span>4,000원</span>
+                    </p>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <span>총 5건</span>
+                    <span>17,500원</span>
+                </div>
+            </article>
+            <article>
+                <input type="checkbox" id="allwrap" checked>
+                <label for="allwrap">전체포장</label>
+            </article>
+    
+            <div>
+                <input type="button" value="주문하기">
+            </div>
+            <div>
+                <input type="button" value="취소하기">
+            </div>
+        </form>
+    </section>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
+</html>
